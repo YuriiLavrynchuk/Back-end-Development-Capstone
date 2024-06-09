@@ -100,8 +100,6 @@ def concert_detail(request, id):
                                                        "attending_choices": ConcertAttending.AttendingChoices.choices})
     else:
         return HttpResponseRedirect(reverse("login"))
-    pass
-
 
 def concert_attendee(request):
     if request.user.is_authenticated:
