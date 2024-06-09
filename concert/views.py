@@ -62,8 +62,8 @@ def login_view(request):
                 login(request, user)
                 return HttpResponseRedirect(reverse("index"))
         except User.DoesNotExist:
-            return render(request, "login.html", {'form': LoginForm})
-    return HttpResponseRedirect(reverse("login"))
+            return render(request, "login.html", {"form": LoginForm})
+    return render(request, "login.html", {"form": LoginForm})
 
 
 def logout_view(request):
